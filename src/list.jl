@@ -36,14 +36,6 @@ end
 
 list() = nil()
 
-function list(elts...)
-    l = nil()
-    for i=length(elts):-1:1
-        l = cons(elts[i],l)
-    end
-    return l
-end
-
 function list{T}(elts::T...)
     l = nil(T)
     for i=length(elts):-1:1
